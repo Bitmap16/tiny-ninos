@@ -23,8 +23,26 @@
         <img 
             src="assets/pixel-art-placeholder.png" 
             alt="Pixel Art" 
-            class="main-image"
+            class="main-image" 
+            onclick="openImageViewer(this)"
         >
+        
+        <!-- Discord Widget -->
+        <div class="discord-widget">
+            <iframe 
+                src="https://discord.com/widget?id=755546500766892073&theme=dark" 
+                width="350" 
+                height="500" 
+                allowtransparency="true" 
+                frameborder="0"
+            ></iframe>
+        </div>
+    </div>
+
+    <!-- Modal for Image Viewer -->
+    <div class="image-viewer" id="imageViewer">
+        <span class="close-btn" onclick="closeImageViewer()">×</span>
+        <img class="viewer-image" id="viewerImage" alt="Expanded View">
     </div>
 
     <script src="script.js"></script>
