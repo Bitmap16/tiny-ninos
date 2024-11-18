@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Website</title>
+    <title>Tiny Niños</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Test Website</h1>
-    </header>
-    <section>
-        <p>This is a simple test website hosted on GitHub Pages and Cloudflare.</p>
-        <button id="clickMe">Click Me</button>
-    </section>
-    <footer>
-        <p>&copy; 2024 Test Website</p>
-    </footer>
-    <script src="scripts.js"></script>
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Tiny Niños</h1>
+            <button class="hero-button" onclick="enterWorld()">Enter World</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <h2 class="main-title">Welcome to the World of Tiny Niños!</h2>
+        <p>Explore our games, community, and adventures in a pixel-perfect universe.</p>
+        <img 
+            src="https://via.placeholder.com/300x200.png?text=Pixel+Art+Image" 
+            alt="Pixel Art" 
+            class="main-image"
+        >
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
