@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiny Niños</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Hero Section -->
@@ -12,37 +13,42 @@
         <div class="hero-background"></div>
         <div class="hero-content">
             <h1 class="hero-title">Welcome to Tiny Niños</h1>
-            <button class="hero-button" onclick="enterWorld()">Enter World</button>
+            <button class="hero-button" onclick="enterWorld()">Enter the World of Tiny Niños</button>
         </div>
     </div>
 
     <!-- Main Content -->
     <div class="main-content" id="mainContent">
         <h2 class="main-title">Welcome to the World of Tiny Niños!</h2>
-        <p>Explore our games, community, and adventures in a pixel-perfect universe.</p>
-        <img 
-            src="assets/pixel-art-placeholder.png" 
-            alt="Pixel Art" 
-            class="main-image" 
-            onclick="openImageViewer(this)"
-        >
-        
-        <!-- Discord Widget -->
-        <div class="discord-widget">
-            <iframe 
-                src="https://discord.com/widget?id=755546500766892073&theme=dark" 
-                width="350" 
-                height="500" 
-                allowtransparency="true" 
-                frameborder="0"
-            ></iframe>
+        <p>Join our Discord server, or our Minecraft server... Just don't stay out too late...</p>
+
+        <!-- Draggable Image Container with Clickable Image -->
+        <div class="draggable" id="imageContainer">
+            <div class="drag-bar">Image</div>
+            <img 
+                src="assets/pixel-art-placeholder.png" 
+                alt="Pixel Art" 
+                class="main-image" 
+                onclick="openImageViewer(this)" />
+        </div>
+
+        <!-- Draggable Discord Widget -->
+        <div class="draggable" id="discordContainer">
+            <div class="drag-bar">Discord</div>
+            <iframe
+                src="https://discord.com/widget?id=755546500766892073&theme=dark"
+                width="350"
+                height="500"
+                allowtransparency="true"
+                style="border: none;">
+            </iframe>
         </div>
     </div>
 
     <!-- Modal for Image Viewer -->
-    <div class="image-viewer" id="imageViewer">
-        <span class="close-btn" onclick="closeImageViewer()">×</span>
-        <img class="viewer-image" id="viewerImage" alt="Expanded View">
+    <div class="image-viewer" id="imageViewer" aria-hidden="true" role="dialog" aria-labelledby="viewerImage">
+        <button class="close-btn" onclick="closeImageViewer()" tabindex="0" aria-label="Close image viewer">×</button>
+        <img class="viewer-image" id="viewerImage" lang="en" alt="Expanded view of the selected image">
     </div>
 
     <script src="script.js"></script>
