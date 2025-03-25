@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiny Niños</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Desktop</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero" id="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Welcome to Tiny Niños</h1>
-            <button class="hero-button" onclick="enterWorld()">Enter the World of Tiny Niños</button>
-        </div>
+  <!-- Desktop area -->
+  <div class="desktop">
+    <div class="icon-container">
+      <div class="icon" id="myAppIcon">
+        <img src="https://i.imgur.com/5b6X77s.png" alt="My App" />
+        <div>My App</div>
+      </div>
+      <!-- Add more icons as needed -->
     </div>
+  </div>
 
-    <!-- Main Content -->
-    <div class="main-content" id="mainContent">
-        <h2 class="main-title">Welcome to the World of Tiny Niños!</h2>
-        <p>Join our Discord server, or our Minecraft server... Just don't stay out too late...</p>
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <button class="button" id="startButton">Start</button>
+    <!-- Add more taskbar buttons if necessary -->
+  </div>
 
-        <!-- Draggable Image Container with Clickable Image -->
-        <div class="draggable" id="imageContainer">
-            <div class="drag-bar">Image</div>
-            <img 
-                src="assets/pixel-art-placeholder.png" 
-                alt="Pixel Art" 
-                class="main-image" 
-                onclick="openImageViewer(this)" />
-        </div>
-
-        <!-- Draggable Discord Widget -->
-        <div class="draggable" id="discordContainer">
-            <div class="drag-bar">Discord</div>
-            <iframe
-                src="https://discord.com/widget?id=755546500766892073&theme=dark"
-                width="350"
-                height="500"
-                allowtransparency="true"
-                style="border: none;">
-            </iframe>
-        </div>
+  <!-- Sample window -->
+  <div class="window" id="myAppWindow">
+    <div class="titlebar" id="myAppTitlebar">
+      <span>My Application</span>
+      <button class="close-btn" id="closeMyApp">X</button>
     </div>
-
-    <!-- Modal for Image Viewer -->
-    <div class="image-viewer" id="imageViewer" aria-hidden="true" role="dialog" aria-labelledby="viewerImage">
-        <button class="close-btn" onclick="closeImageViewer()" tabindex="0" aria-label="Close image viewer">×</button>
-        <img class="viewer-image" id="viewerImage" lang="en" alt="Expanded view of the selected image">
+    <div class="content">
+      <p>This is a sample application window.</p>
+      <p>You can add more content here.</p>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
